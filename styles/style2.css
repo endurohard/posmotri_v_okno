@@ -1,0 +1,328 @@
+
+body {
+    height: 800px;
+    width: 1200px;
+    background: #1b1919; /* Фон */
+    font-family: 'Fira Sans Condensed', sans-serif;
+    color: #fff;
+    font-size: 18px;
+    font-weight: normal;
+}
+.page {
+    font-weight: normal;
+    display: flex;
+    justify-content: center;
+    width: 1200px;
+    height: 800px;
+    font-family: Arial, sans-serif;
+    background: #1B1919;
+}
+
+
+.content {
+    font-weight: normal;
+    display: flex;
+    gap: 30px;
+    top: 133px;
+    left: 30px;
+    width: 1140px;
+    height: 534px;
+}
+
+
+.result {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 711px;
+    height: 456px;
+}
+
+
+.result__video-container {
+    position: relative;
+    top: 78px;
+    width: 711px;
+    height: 386px;
+}
+
+.result__video {
+    width: 711px;
+    height: 386px;
+    background-color: #000;
+}
+
+/* Форма поиска */
+.search-form {
+    margin-top: 16px;
+    height: 54px;
+    width: 711px;
+    display: flex;
+    gap: 40px;
+}
+
+/* Блок fieldset и заголовок внутри него */
+.search-form__fieldset {
+    position: relative;
+    border: none;
+    margin: 0;
+    width: 225px;
+    height: 54px;
+}
+
+.search-form__fieldset-title {
+    font-family: Fira sans Condensed, sans-serif;
+    font-size: 18px;
+    padding-bottom: 5px;
+    color: #fff;
+    line-height: 21.6px;
+}
+
+/* Общий контейнер для label в форме */
+.search-form__label input {
+    font-weight: normal;
+    border: none;
+    outline: none;
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    font-family: 'Fira Sans Condensed', sans-serif;
+}
+
+/* Текст внутри label (скрытый или видимый) */
+.search-form__label-text {
+    font-size: 1rem;
+}
+
+/* Текстовое поле для ввода города */
+.search-form__textfield {
+    width: 200px;
+    font-size: 1rem;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+/* Список чекбоксов/радиокнопок для выбора времени суток */
+.search-form__checkbox-list {
+    display: flex;
+    gap: 10px;
+}
+
+/* Скрытый чекбокс / радиокнопка */
+.search-form__checkbox.visually-hidden {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Псевдо-чекбокс (кастомный вид) */
+.search-form__pseudo-checkbox {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #000;
+    background-color: #fff;
+    margin-right: 8px;
+    border-radius: 2px;
+    transition: background-color 0.3s;
+}
+
+/* При наведении можно менять цвет обводки */
+.search-form__label:hover .search-form__pseudo-checkbox {
+    border-color: #007bff;
+}
+
+/* При выборе радиокнопки меняем внутренний фон */
+.search-form__checkbox:checked + .search-form__pseudo-checkbox {
+    background-color: transparent;
+    border-color: #007bff;
+}
+
+/* Кнопка "Найти" */
+.search-form__submit-button {
+    font-family: "Fira Sans Condensed";
+    cursor: pointer;
+    font-size: 18px;
+    padding: 10px 16px;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    align-self: flex-end;
+    transition: background-color 0.3s;
+}
+
+.search-form__submit-button:hover {
+    background-color: transparent;
+}
+
+/* Контейнер с деталями контента */
+.content__details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    inline-size: calc(100% - 60px); /* С учётом отступов */
+    block-size: auto;
+    gap: 26px;
+}
+
+/* Заголовок H1 */
+.title {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-size: 75px;
+    font-family: Oswald;
+    font-weight: 700;
+    line-height: 70.5px;
+    width: 259px;
+    height: 210px;
+}
+
+/* Выделение части заголовка другим цветом */
+.content__accent {
+    color:#545050;
+}
+
+/* Список карточек */
+.content__list {
+    padding: 0;
+    list-style-type: none;
+    overflow-y: auto; /* Вертикальный скролл при переполнении */
+    max-block-size: 400px; /* Максимальная высота */
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Отступы между карточками */
+    font-family: Fira sans Condensed;
+}
+
+/* Прелоадер */
+.preloader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 200px; /* Задайте нужную высоту */
+}
+
+.preloader-chasing-squares {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    /* Добавьте анимацию по вкусу */
+}
+
+.square {
+    width: 20px;
+    height: 20px;
+    background-color: #007bff;
+    margin: 2px;
+    /* Анимация движения, вращения и т.д. */
+}
+
+/* Карточки в списке */
+.content__list-item {
+    gap: 30px;
+    margin-bottom: 0px;
+    background-color: transparent;
+}
+
+.content__card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* Карточка с видео */
+.content__video-card {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    transition: box-shadow 0.3s;
+    background-color: transparent;
+}
+
+.content__video-card:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Контейнер с описанием видео */
+.content__video-card-description-container {
+    flex: 1;
+    padding: 0px;
+    color: #ffffff;
+}
+
+/* Заголовок в карточке */
+.content__video-card-title {
+    font-family: Oswald;
+    font-size: 30px;
+    line-height: 30px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+/* Описание в карточке */
+.content__video-card-description {
+    font-size: 18px;
+    font-family: "Fira Sans Condensed";
+    color: #ffffff;
+}
+
+/* Превью (миниатюра) */
+.content__video-card-thumbnail {
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Общий класс для кнопок */
+.button {
+    cursor: pointer;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 16px;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+
+.more-button {
+    display: block;
+    margin-top: 20px;
+}
+
+
+.error {
+    text-align: center;
+    background-color: #f8d7da;
+    border: 2px solid #f5c2c7;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.error__title {
+    margin: 0;
+    font-size: 1.4rem;
+    color: #721c24;
+}
+
+
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    clip: rect(1px, 1px, 1px, 1px) !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    border: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
