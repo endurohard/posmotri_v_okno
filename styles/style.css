@@ -40,8 +40,6 @@ ol {
   list-style: none;
 }
 
-/* ШАГЫ 1-2: ЛЕЙАУТ И РАЗМЕРЫ */
-
 .content {
   display: flex;
   align-items: end;
@@ -93,7 +91,6 @@ ol {
   cursor: pointer;
 }
 
-/* Состояние фокуса для лейбла поискового поля */
 .search-form__label:has(:focus-visible) {
   outline: 1px solid #fff;
   outline-offset: 1px;
@@ -148,8 +145,7 @@ ol {
   opacity: 1;
 }
 
-/* Подчёркивание текста чекбокса при наведении */
-.search-form__label:hover .search-form__label-text {
+.search-form__checkbox-list .search-form__label:hover .search-form__label-text {
   text-decoration: underline;
 }
 
@@ -162,7 +158,7 @@ ol {
 }
 
 .title {
-  font-family: Oswald, sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: 75px;
   font-weight: 700;
   line-height: 0.94;
@@ -184,7 +180,7 @@ ol {
 }
 
 .content__list::-webkit-scrollbar {
-  inline-size: 8px;
+  width: 8px;
 }
 
 .content__list::-webkit-scrollbar-track {
@@ -243,7 +239,7 @@ ol {
 }
 
 .content__video-card-title {
-  font-family: Oswald, sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: 30px;
   font-weight: 700;
   line-height: 1;
@@ -271,8 +267,6 @@ ol {
   object-fit: cover;
   object-position: center;
 }
-
-/* КНОПКИ */
 
 .button {
   font-family: 'Fira Sans Condensed', sans-serif;
@@ -309,8 +303,6 @@ ol {
 .more-button {
   inline-size: 100%;
 }
-
-/* ВСПОМОГАТЕЛЬНЫЕ КЛАССЫ */
 
 .visually-hidden {
   position: absolute;
